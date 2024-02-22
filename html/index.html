@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инвентарь инструментов</title>
+</head>
+<body>
+    <h1>Инвентарь инструментов</h1>
+    <form id="toolForm">
+        <label for="toolId">ID:</label>
+        <input type="text" id="toolId" name="toolId"><br>
+        
+        <label for="toolName">Наименование:</label>
+        <input type="text" id="toolName" name="toolName"><br>
+        
+        <label for="toolCountry">Страна производства:</label>
+        <input type="text" id="toolCountry" name="toolCountry"><br>
+        
+        <label for="toolPrice">Цена:</label>
+        <input type="text" id="toolPrice" name="toolPrice"><br>
+        
+        <button type="button" onclick="addTool()">Добавить инструмент</button>
+        <button type="button" onclick="clearForm()">Очистить форму</button>
+        <button type="button" onclick="showAllTools()">Показать все инструменты</button><br>
+        
+        <label for="toolIdToDelete">ID инструмента для удаления:</label>
+        <input type="text" id="toolIdToDelete" name="toolIdToDelete">
+        <button type="button" onclick="deleteTool()">Удалить инструмент</button><br>
+        
+        <label for="toolIdToShow">ID инструмента для отображения:</label>
+        <input type="text" id="toolIdToShow" name="toolIdToShow">
+        <button type="button" onclick="showTool()">Показать инструмент</button>
+    </form>
+    <div id="toolInfo"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="/template/template.js"></script>
+    <script src="/script/js.js"></script>
+</body>
+</html>
