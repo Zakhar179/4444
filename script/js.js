@@ -69,7 +69,7 @@ const toolInfoDisplayer = new ToolInfoDisplayer(toolManager);
 // Подключаем обработчики событий для кнопок после загрузки документа
 document.addEventListener("DOMContentLoaded", function() {
     // Обработчик для кнопки "Добавить инструмент"
-    document.querySelector("#toolForm button:nth-of-type(1)").addEventListener("click", function() {
+    document.getElementById("addTool").addEventListener("click", function() {
         toolManager.addTool(
             document.getElementById('toolId').value,
             document.getElementById('toolName').value,
@@ -79,24 +79,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Обработчик для кнопки "Очистить форму"
-    document.querySelector("#toolForm button:nth-of-type(2)").addEventListener("click", function() {
+    document.getElementById("clearForm").addEventListener("click", function() {
         toolManager.clearForm();
     });
 
     // Обработчик для кнопки "Показать все инструменты"
-    document.querySelector("#toolForm button:nth-of-type(3)").addEventListener("click", function() {
+    document.getElementById("showAllTools").addEventListener("click", function() {
         toolInfoDisplayer.showAllTools();
     });
 
     // Обработчик для кнопки "Удалить инструмент"
-    document.querySelector("#toolForm button:nth-of-type(5)").addEventListener("click", function() {
+    document.getElementById("deleteTool").addEventListener("click", function() {
         const idToDelete = document.getElementById('toolIdToDelete').value;
         toolManager.deleteTool(idToDelete);
         toolInfoDisplayer.showAllTools(); // После удаления инструмента обновляем отображаемую информацию
     });
 
     // Обработчик для кнопки "Показать инструмент"
-    document.querySelector("#toolForm button:nth-of-type(7)").addEventListener("click", function() {
+    document.getElementById("showTool").addEventListener("click", function() {
         const idToShow = document.getElementById('toolIdToShow').value;
         toolInfoDisplayer.showTool(idToShow);
     });
