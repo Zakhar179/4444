@@ -10,27 +10,27 @@
     <form id="toolForm">
         <label for="toolId">ID:</label>
         <input type="text" id="toolId" name="toolId"><br>
-        
+
         <label for="toolName">Наименование:</label>
         <input type="text" id="toolName" name="toolName"><br>
-        
+
         <label for="toolCountry">Страна производства:</label>
         <input type="text" id="toolCountry" name="toolCountry"><br>
-        
+
         <label for="toolPrice">Цена:</label>
         <input type="text" id="toolPrice" name="toolPrice"><br>
-        
-        <button type="button" onclick="addTool()">Добавить инструмент</button>
-        <button type="button" onclick="clearForm()">Очистить форму</button>
-        <button type="button" onclick="showAllTools()">Показать все инструменты</button><br>
-        
+
+        <button type="button" id="addTool">Добавить инструмент</button>
+        <button type="button"   id = "clearForm">Очистить форму</button>
+        <button type="button" id="showAllTools">Показать все инструменты</button><br>
+
         <label for="toolIdToDelete">ID инструмента для удаления:</label>
         <input type="text" id="toolIdToDelete" name="toolIdToDelete">
-        <button type="button" onclick="deleteTool()">Удалить инструмент</button><br>
-        
+        <button type="button" id="deleteTool">Удалить инструмент</button><br>
+
         <label for="toolIdToShow">ID инструмента для отображения:</label>
         <input type="text" id="toolIdToShow" name="toolIdToShow">
-        <button type="button" onclick="showTool()">Показать инструмент</button>
+        <button type="button" id="showTool">Показать инструмент</button>
     </form>
     <div id="toolInfo"></div>
 
